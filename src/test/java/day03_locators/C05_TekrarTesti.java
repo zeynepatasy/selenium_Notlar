@@ -28,12 +28,18 @@ public class C05_TekrarTesti {
         List<WebElement>istenenElementListesi=driver.findElements(By.className("sg-col-inner"));
         WebElement sonucYazısı=istenenElementListesi.get(0);
         System.out.println(sonucYazısı.getText());
-
+         //görüntülenen ilgili sonucların sayısını yazdırın
      String sonucYazısıDeğerleri= String.valueOf(sonucYazısı.getText());
         System.out.println(sonucYazısıDeğerleri);
+        //Sonuç değerinin kaç tane olduğunu yazdırın
     String[]arr=sonucYazısıDeğerleri.split(" ");
         System.out.println(Arrays.toString(arr));
         System.out.println(arr[2]);
+        //çıkan ilk resme tıklayın
+    List<WebElement>urunResimleri=driver.findElements(By.className("sg-col-inner"));
+    WebElement ılkUrunResmi=urunResimleri.get(4);
+    ılkUrunResmi.click();
+
         }
 
 
